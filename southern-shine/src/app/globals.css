@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 60% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Saturated sea‑green primary for standout buttons */
+    --primary: 22 80% 56%;
+    --primary-foreground: 60 9.1% 97.8%;
+
+    /* Muted sea‑green for gentle surfaces */
+    --secondary: 22 35% 94%;
+    --secondary-foreground: 22 35% 28%;
+
+    /* Muted lavender accents for soft highlights */
+    --muted: 35 25% 95%;
+    --muted-foreground: 35 22% 35%;
+
+    --accent: 18 45% 96%;
+    --accent-foreground: 18 40% 30%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Slightly stronger default border; saturated borders can opt into primary */
+    --border: 22 25% 85%;
+    --input: 22 25% 85%;
+    --ring: 22 80% 56%;
+
+    --chart-1: 22 80% 56%;
+    --chart-2: 10 70% 50%;
+    --chart-3: 35 55% 45%;
+    --chart-4: 45 70% 52%;
+    --chart-5: 5 70% 45%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background:
+      radial-gradient(1200px 600px at -10% -10%, hsl(var(--accent) / 0.25), transparent 40%),
+      radial-gradient(1000px 500px at 110% 0%, hsl(var(--primary) / 0.12), transparent 35%),
+      hsl(var(--background));
+  }
+}
