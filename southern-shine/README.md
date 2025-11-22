@@ -60,12 +60,17 @@ npm run dev
 
 ## Prompt to share with the VS Code AI assistant (Codex)
 
-If you start a new Codex chat and need it to reference this repo and the updated instructions, paste the prompt below. It tells Codex where to look for the project and the README you are reading now.
+If you start a fresh Codex chat and need it to pick up this project quickly, paste the prompt below. It tells Codex how to find the repo (whether you are using WSL or a different path) and which commands to run.
 
 ```
-Use the workspace folder `/workspace/nates-mcps/southern-shine`.
-Open `README.md` at the root of that folder for setup, commands, and deployment steps.
-Run `npm install`, then `npm run dev` (port 9002) to preview, and `npm run lint` after stopping the dev server.
+You are helping with a Next.js project called “Southern Shine.” First, make sure you are inside the project folder.
+
+1) Try: cd /workspace/nates-mcps/southern-shine && pwd
+2) If that path does not exist, ask me for my local path or look for a clone such as ~/southern-shine or /mnt/c/Users/<MYUSER>/southern-shine; change into that folder and run pwd to confirm it ends with southern-shine.
+3) Open README.md at the project root and follow the setup steps inside.
+4) Run npm install, then npm run dev (on port 9002) to preview. After stopping dev, run npm run lint.
+
+Use the README for environment variables (.env.example → .env.local). Confirm all buttons/links work while the dev server is running.
 ```
 
 ## Deploying on Vercel (Free)
